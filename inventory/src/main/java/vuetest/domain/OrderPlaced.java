@@ -1,8 +1,9 @@
 package vuetest.domain;
 
-import java.util.*;
-import lombok.*;
-import vuetest.domain.*;
+import java.util.Date;
+
+import lombok.Data;
+import lombok.ToString;
 import vuetest.infra.AbstractEvent;
 
 @Data
@@ -13,5 +14,6 @@ public class OrderPlaced extends AbstractEvent {
     private Integer qty;
     private String userId;
     private Date orderDate;
-    
+    private Object inventoryId;
+    private Object address;
 }
