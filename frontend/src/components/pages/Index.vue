@@ -32,6 +32,22 @@ export default {
   name: 'Index',
   data: () => ({
     cards: [
+      {
+          text: "Order",
+          link: "/orders/orders",
+      },
+      {
+          text: "",
+          link: "//",
+      },
+      {
+          text: "Inventory",
+          link: "/inventories/inventories",
+      },
+      {
+          text: "",
+          link: "//",
+      },
     ],
   }),
 };

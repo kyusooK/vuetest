@@ -3,13 +3,13 @@
         <!-- namefield의 값은 참조하는 어그리거트의 속성값중 하나로 변경하면 변경한 속성에 맞는 필드명이 표시됩니다.  ex)nameField="속성값" <span>{{ value && value.속성값 ? value.속성값 : '' }}</span> -->
         <div v-if="Array.isArray(value)">
             <div v-for="(item, index) in value" :key="index">
-                <span>{{ item. ? item. : '' }}</span>
+                <span>{{ item.productName ? item.productName : '' }}</span>
             </div>
         </div>
         <div v-else>
-            <BasePicker v-if="editMode" searchApiPath="inventories" searchParameterName=""  idField="" nameField="" path="inventories" label="InventoryId" v-model="value" @selected="pick" :editMode="editMode" />
+            <BasePicker v-if="editMode" searchApiPath="inventories" searchParameterName="productName"  idField="id" nameField="productName" path="inventories" label="InventoryId" v-model="value" @selected="pick" :editMode="editMode" />
             <div v-else style="height:100%">
-                <span>{{ value && value. ? value. : '' }}</span>
+                <span>{{ value && value.productName ? value.productName : '' }}</span>
             </div>
         </div>
     </div>

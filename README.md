@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/123912988/storming/ed0040092fc8770c3db14cfc8ad6ae07
+www.msaez.io/#/123912988/storming/vuetest
 
 ## frontend
 How to install npm
@@ -59,9 +59,13 @@ mvn spring-boot:run
 ## Test by API
 - order
 ```
+ http :8088/orders id="id"qty="qty"userId="userId"orderDate="orderDate"InventoryId := '{"id": 0}'Address := '{"street": street, "city": city, "state": state, "country": country, "zipcode": zipcode}'
+ http :8088/ 
 ```
 - inventory
 ```
+ http :8088/inventories id="id"productName="productName"qty="qty"Photo := '{"imgName": imgName, "imgFile": imgFile}'
+ http :8088/ 
 ```
 
 

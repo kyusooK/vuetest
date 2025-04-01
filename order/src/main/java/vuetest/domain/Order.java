@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.persistence.*;
 import lombok.Data;
 import vuetest.OrderApplication;
+import vuetest.domain.OrderPlaced;
 
 @Entity
 @Table(name = "Order_table")
@@ -30,6 +31,12 @@ public class Order {
 
     @Embedded
     private Address address;
+
+    @PostPersist
+    public void onPostPersist() {
+        OrderPlaced orderPlaced = new OrderPlaced(this);
+        orderPlaced.publishAfterCommit();
+    }
 
     public static OrderRepository repository() {
         OrderRepository orderRepository = OrderApplication.applicationContext.getBean(
