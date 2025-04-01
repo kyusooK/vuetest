@@ -21,7 +21,7 @@ public class Inventory {
 
     private String productName;
 
-    private String qty;
+    private Integer qty;
 
     @Embedded
     private Photo photo;
@@ -37,31 +37,19 @@ public class Inventory {
     public static void decreaseStock(OrderPlaced orderPlaced) {
         //implement business logic here:
 
-        /** Example 1:  new item 
-        Inventory inventory = new Inventory();
-        repository().save(inventory);
+       
+        ObjectMapper mapper = new ObjectMapper();
+        Map<Long, Object> orderMap = mapper.convertValue(orderPlaced.getInventoryId(), Map.class);
 
-        StockDecreased stockDecreased = new StockDecreased(inventory);
-        stockDecreased.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        // if orderPlaced.inventoryId exists, use it
-        
-        // ObjectMapper mapper = new ObjectMapper();
-        // Map<Long, Object> orderMap = mapper.convertValue(orderPlaced.getInventoryId(), Map.class);
-
-        repository().findById(orderPlaced.get???()).ifPresent(inventory->{
+        repository().findById(orderMap.get("id")).ifPresent(inventory->{
             
-            inventory // do something
+            inventory.setStock(inventory.getStock() - orderPlaced.getQty());
             repository().save(inventory);
 
             StockDecreased stockDecreased = new StockDecreased(inventory);
             stockDecreased.publishAfterCommit();
 
          });
-        */
 
     }
     //>>> Clean Arch / Port Method
