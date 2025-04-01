@@ -1,11 +1,16 @@
 package vuetest.domain;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
 import java.util.Map;
-import javax.persistence.*;
+
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import lombok.Data;
 import vuetest.InventoryApplication;
 
@@ -41,9 +46,9 @@ public class Inventory {
         ObjectMapper mapper = new ObjectMapper();
         Map<Long, Object> orderMap = mapper.convertValue(orderPlaced.getInventoryId(), Map.class);
 
-        repository().findById(orderMap.get("id")).ifPresent(inventory->{
+        repository().findById(Long.valueOf(orderMap.get("id").toString())).ifPresent(inventory->{
             
-            inventory.setStock(inventory.getStock() - orderPlaced.getQty());
+            inventory.setQty(inventory.getQty() - orderPlaced.getQty());
             repository().save(inventory);
 
             StockDecreased stockDecreased = new StockDecreased(inventory);

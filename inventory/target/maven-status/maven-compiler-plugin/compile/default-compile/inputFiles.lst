@@ -1,0 +1,11 @@
+/workspace/vuetest/inventory/src/main/java/vuetest/config/kafka/KafkaProcessor.java
+/workspace/vuetest/inventory/src/main/java/vuetest/domain/Inventory.java
+/workspace/vuetest/inventory/src/main/java/vuetest/domain/Photo.java
+/workspace/vuetest/inventory/src/main/java/vuetest/domain/OrderPlaced.java
+/workspace/vuetest/inventory/src/main/java/vuetest/infra/PolicyHandler.java
+/workspace/vuetest/inventory/src/main/java/vuetest/domain/InventoryRepository.java
+/workspace/vuetest/inventory/src/main/java/vuetest/infra/AbstractEvent.java
+/workspace/vuetest/inventory/src/main/java/vuetest/domain/StockDecreased.java
+/workspace/vuetest/inventory/src/main/java/vuetest/InventoryApplication.java
+/workspace/vuetest/inventory/src/main/java/vuetest/infra/InventoryController.java
+/workspace/vuetest/inventory/src/main/java/vuetest/infra/InventoryHateoasProcessor.java
