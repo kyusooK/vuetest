@@ -14,7 +14,7 @@ spring:
           predicates:
             - Path=/orders/**, /undefined/**, 
         - id: inventory
-          uri: http://localhost:0
+          uri: http://localhost:8083
           predicates:
             - Path=/inventories/**, /undefined/**, 
         - id: frontend

@@ -8,11 +8,11 @@ const router = createRouter({
       component: () => import('../components/pages/Index.vue'),
     },
     {
-      path: '/orders/orders',
+      path: '/orders',
       component: () => import('../components/ui/OrderGrid.vue'),
     },
     {
-      path: '/inventories/inventories',
+      path: '/inventories',
       component: () => import('../components/ui/InventoryGrid.vue'),
     },
   ],

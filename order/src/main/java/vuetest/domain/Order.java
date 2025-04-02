@@ -47,7 +47,9 @@ public class Order {
 
     //<<< Clean Arch / Port Method
     public void modifyOrderinfo(ModifyOrderinfoCommand modifyOrderinfoCommand) {
-        //implement business logic here:
+        repository().findById(this.getId()).ifPresent(order ->{
+            this.setQty(modifyOrderinfoCommand.getQty());
+        });
 
         OrderInfoModified orderInfoModified = new OrderInfoModified(this);
         orderInfoModified.publishAfterCommit();

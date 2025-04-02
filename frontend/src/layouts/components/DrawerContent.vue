@@ -11,27 +11,17 @@ import {
         <VerticalNavLink
             :item="{
                 title: 'Order',
-                to: '/orders/orders',
+                to: '/orders',
             }"
         />
-        <VerticalNavLink
-            :item="{
-                title: '',
-                to: '//',
-            }"
-        />
+        
         <VerticalNavSectionTitle :item="{ heading: 'Inventory' }" />
         <VerticalNavLink
             :item="{
                 title: 'Inventory',
-                to: '/inventories/inventories',
+                to: '/inventories',
             }"
         />
-        <VerticalNavLink
-            :item="{
-                title: '',
-                to: '//',
-            }"
-        />
+        
     </ul>
 </template>

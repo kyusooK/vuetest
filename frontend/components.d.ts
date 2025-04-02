@@ -7,7 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Address: typeof import('./src/components/Address.vue')['default']
+    Address: typeof import('./src/components/vo/Address.vue')['default']
     AddressDetailGrid: typeof import('./src/components/ui/AddressDetailGrid.vue')['default']
     BaseDetailGrid: typeof import('./src/components/base-ui/BaseDetailGrid.vue')['default']
     BaseEntity: typeof import('./src/components/base-ui/BaseEntity.vue')['default']
@@ -34,7 +34,7 @@ declare module '@vue/runtime-core' {
     Order: typeof import('./src/components/Order.vue')['default']
     OrderGrid: typeof import('./src/components/ui/OrderGrid.vue')['default']
     Payment: typeof import('./src/components/vo/Payment.vue')['default']
-    Photo: typeof import('./src/components/Photo.vue')['default']
+    Photo: typeof import('./src/components/vo/Photo.vue')['default']
     PhotoDetailGrid: typeof import('./src/components/ui/PhotoDetailGrid.vue')['default']
     Placeorder: typeof import('./src/components/Placeorder.vue')['default']
     Rating: typeof import('./src/components/vo/Rating.vue')['default']

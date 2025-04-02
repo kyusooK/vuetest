@@ -146,12 +146,14 @@
 import { ref } from 'vue';
 import { useTheme } from 'vuetify';
 import BaseGrid from '../base-ui/BaseGrid.vue'
+import Address from '../vo/Address.vue'
 
 
 export default {
     name: 'orderGrid',
     mixins:[BaseGrid],
     components:{
+        Address
     },
     data: () => ({
         path: 'orders',
@@ -160,9 +162,10 @@ export default {
     watch: {
     },
     methods:{
-        modifyOrderinfo(params){
+        async modifyOrderinfo(params){
             try{
-                this.repository.invoke(this.getSelectedRow, "modifyOrderinfo", params)
+                var path = "modifyOrderinfo".toLowerCase();
+                var temp = await this.repository.invoke(this.selectedRow, path, params)
                 // 스넥바 관련 수정 필요
                 // this.$EventBus.$emit('show-success','modify orderinfo 성공적으로 처리되었습니다.')
                 for(var i = 0; i< this.value.length; i++){
