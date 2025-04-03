@@ -15,6 +15,10 @@ const router = createRouter({
       path: '/inventories',
       component: () => import('../components/ui/InventoryGrid.vue'),
     },
+    {
+      path: '/myPages',
+      component: () => import('../components/MyPageView.vue'),
+    },
   ],
 })
 

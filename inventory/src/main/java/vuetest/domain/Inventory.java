@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.Data;
 import vuetest.InventoryApplication;
+import vuetest.domain.StockDecreased;
 
 @Entity
 @Table(name = "Inventory_table")

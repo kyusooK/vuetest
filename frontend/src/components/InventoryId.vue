@@ -7,7 +7,7 @@
             </div>
         </div>
         <div v-else>
-            <BasePicker v-if="editMode" searchApiPath="inventories" searchParameterName="productName"  idField="id" nameField="productName" path="inventories" label="InventoryId" v-model="value" @selected="pick" :editMode="editMode" />
+            <BasePicker v-if="editMode" searchApiPath="inventories/search/findByGetInventory" searchParameterName="productName"  idField="id" nameField="productName" path="inventories" label="InventoryId" v-model="value" @selected="pick" :editMode="editMode" />
             <div v-else style="height:100%">
                 <span>{{ value && value.productName ? value.productName : '' }}</span>
             </div>

@@ -8,15 +8,15 @@ How to install npm
 npm install -g npm@9
 
 # How to install Node.js
-# 1. Visit the official Node.js website: https://nodejs.org/
-# 2. Download the installer for your operating system.
-# 3. Run the installer and follow the instructions to complete the installation.
-# 4. To install a specific version of Node.js, you can use the following command:
-#    nvm install 20.17.0
-#    (Make sure you have nvm installed. If not, follow the instructions at https://github.com/nvm-sh/nvm)
-# 5. Once installed, you can verify the installation by running the following commands in your terminal:
-#    node -v
-#    npm -v
+### 1. Visit the official Node.js website: https://nodejs.org/
+### 2. Download the installer for your operating system.
+### 3. Run the installer and follow the instructions to complete the installation.
+### 4. To install a specific version of Node.js, you can use the following command:
+###    nvm install 20.17.0
+###    (Make sure you have nvm installed. If not, follow the instructions at https://github.com/nvm-sh/nvm)
+### 5. Once installed, you can verify the installation by running the following commands in your terminal:
+###    node -v
+###    npm -v
 
 node -v : 20.17.0
 npm -v : 9.9.4
@@ -48,6 +48,7 @@ See the README.md files inside the each microservices directory:
 
 - order
 - inventory
+- customercenter
 
 
 ## Run API Gateway (Spring Gateway)
@@ -60,12 +61,13 @@ mvn spring-boot:run
 - order
 ```
  http :8088/orders id="id"qty="qty"userId="userId"orderDate="orderDate"InventoryId := '{"id": 0}'Address := '{"street": street, "city": city, "state": state, "country": country, "zipcode": zipcode}'
- http :8088/ 
 ```
 - inventory
 ```
  http :8088/inventories id="id"productName="productName"qty="qty"Photo := '{"imgName": imgName, "imgFile": imgFile}'
- http :8088/ 
+```
+- customercenter
+```
 ```
 
 

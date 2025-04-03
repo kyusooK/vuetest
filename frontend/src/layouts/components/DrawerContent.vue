@@ -22,6 +22,13 @@ import {
                 to: '/inventories',
             }"
         />
+        <VerticalNavSectionTitle :item="{ heading: 'Customercenter' }" />
+        <VerticalNavLink
+            :item="{
+                title: 'MyPage',
+                to: '/myPages',
+            }"
+        />
         
     </ul>
 </template>

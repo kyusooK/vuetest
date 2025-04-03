@@ -40,6 +40,14 @@ export default {
           text: "Inventory",
           link: "/inventories",
       },
+      {
+          text: "GetInventory",
+          link: "/getInventories",
+      },
+      {
+          text: "MyPage",
+          link: "/myPages",
+      },
       
     ],
   }),

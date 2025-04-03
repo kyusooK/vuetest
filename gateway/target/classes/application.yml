@@ -12,11 +12,15 @@ spring:
         - id: order
           uri: http://localhost:8082
           predicates:
-            - Path=/orders/**, /undefined/**, 
+            - Path=/orders/**, 
         - id: inventory
           uri: http://localhost:8083
           predicates:
-            - Path=/inventories/**, /undefined/**, 
+            - Path=/inventories/**, /getInventories/**
+        - id: customercenter
+          uri: http://localhost:8084
+          predicates:
+            - Path=, /myPages/**
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -44,11 +48,15 @@ spring:
         - id: order
           uri: http://order:8080
           predicates:
-            - Path=/orders/**, /undefined/**, 
+            - Path=/orders/**, 
         - id: inventory
           uri: http://inventory:8080
           predicates:
-            - Path=/inventories/**, /undefined/**, 
+            - Path=/inventories/**, 
+        - id: customercenter
+          uri: http://customercenter:8080
+          predicates:
+            - Path=, 
         - id: frontend
           uri: http://frontend:8080
           predicates:
