@@ -83,22 +83,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: customercenter
+  name: customercenter
   labels:
-    app: customercenter
+    app: customercenter
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: customercenter
+      app: customercenter
   template:
     metadata:
       labels:
-        app: customercenter
+        app: customercenter
     spec:
       containers:
-        - name: customercenter
-          image: username/customercenter:latest
+        - name: customercenter
+          image: username/customercenter:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -159,13 +159,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: customercenter
+  name: customercenter
   labels:
-    app: customercenter
+    app: customercenter
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: customercenter
+    app: customercenter
 
