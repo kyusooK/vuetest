@@ -51,7 +51,7 @@ services:
       - ./inventory:/usr/src
       - ./maven-repo:/root/.m2
       
-  customercenter:
+  customercenter:
     depends_on: 
       - kafka
     image: adoptopenjdk/maven-openjdk11:latest
@@ -62,6 +62,6 @@ services:
       - 8084:8084
     working_dir: /usr/src
     volumes:
-      - ./customercenter:/usr/src
+      - ./customercenter:/usr/src
       - ./maven-repo:/root/.m2
       
