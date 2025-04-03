@@ -30,18 +30,18 @@ export default class BaseRepository{
     }
 
     async find(query) {
-         var temp = null;
-         if(query!=null){
+        var temp = null;
+        if(query!=null){
             let parameter = {
                 params: query.parameters
             }
 
             temp = await this.axios.get(this.fixUrl(`/${query.apiPath}`), parameter);
-         }else{
+        }else{
             temp = await this.axios.get(this.fixUrl(`/${this.path}`));
-         }
+        }
 
-         return await this.afterProcess(temp.data._embedded[this.path]);
+        return await this.afterProcess(temp.data._embedded[this.path]);
 
     }
 

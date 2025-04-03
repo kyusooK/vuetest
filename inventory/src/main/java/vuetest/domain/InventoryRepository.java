@@ -18,7 +18,7 @@ public interface InventoryRepository
     @Query(
         value = "select inventory " +
         "from Inventory inventory " +
-        "where(:productName is null or inventory.productName like %:productName%) and (:qty is null or inventory.qty like %:qty%)"
+        "where(:productName is null or inventory.productName like %:productName%) and (:qty is null or inventory.qty = :qty)"
     )
-    Inventory getInventory(String productName, String qty);
+    List<Inventory> getInventory(String productName, Integer qty);
 }

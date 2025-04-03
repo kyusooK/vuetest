@@ -52,11 +52,11 @@
                             <td class="whitespace-nowrap" label="Qty">{{ val.qty }}</td>
                             <td class="whitespace-nowrap" label="UserId">{{ val.userId }}</td>
                             <td class="whitespace-nowrap" label="OrderDate">{{ val.orderDate }}</td>
-                            <td class="whitespace-nowrap" label="Address">
-                                <Address :editMode="false" :inList="true" v-model="val.address"></Address>
-                            </td>
                             <td class="whitespace-nowrap" label="Inventory">
                                 <InventoryId :editMode="editMode" v-model="val.inventoryId"></InventoryId>
+                            </td>
+                            <td class="whitespace-nowrap" label="Address">
+                                <Address :editMode="false" :inList="true" v-model="val.address"></Address>
                             </td>
                             <v-row class="ma-0 pa-4 align-center">
                                 <v-spacer></v-spacer>

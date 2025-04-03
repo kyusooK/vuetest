@@ -10,9 +10,13 @@
 <script>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
+import { VDataTable } from 'vuetify/labs/VDataTable'  // 추가
 
 export default {
     name: 'MyPageView',
+    components: {
+        VDataTable,  // 컴포넌트 등록
+    },
     props: {
         value: Object,
         editMode: Boolean,
@@ -21,9 +25,9 @@ export default {
     setup() {
         const headers = ref([
             // 필드 디스크립터를 기반으로 헤더 설정
-            { text: "id", value: "id" },
-            { text: "userId", value: "userId" },
-            { text: "qty", value: "qty" },
+            { title: "id", key: "id" },
+            { title: "userId", key: "userId" },
+            { title: "qty", key: "qty" },
         ]);
 
         const items = ref([]);

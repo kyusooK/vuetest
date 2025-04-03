@@ -36,7 +36,7 @@
         data: () => ({
             editMode: true,
             value: {
-                apiPath: 'inventories/search/findByGetInventory',
+                apiPath: 'inventories/search/getInventory',
                 parameters: {}
             },
         }),
