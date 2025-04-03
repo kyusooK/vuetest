@@ -19,6 +19,7 @@
                     <v-icon small>mdi-pencil</v-icon>수정
                 </v-btn>
             </div>
+            <GetInventory @search="search" style="margin-bottom: 10px; background-color: #ffffff;"></GetInventory>
             <div class="mb-5 text-lg font-bold"></div>
             <div class="table-responsive">
                 <v-table>

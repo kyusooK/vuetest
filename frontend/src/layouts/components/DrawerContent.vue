@@ -11,26 +11,27 @@ import {
         <VerticalNavLink
             :item="{
                 title: 'Order',
-                to: '/orders/orders',
-            }"
-        />
-        <VerticalNavLink
-            :item="{
-                title: '',
-                to: '//',
+                to: '/orders',
             }"
         />
         <VerticalNavSectionTitle :item="{ heading: 'Inventory' }" />
         <VerticalNavLink
             :item="{
                 title: 'Inventory',
-                to: '/inventories/inventories',
+                to: '/inventories',
             }"
         />
         <VerticalNavLink
             :item="{
-                title: '',
-                to: '//',
+                title: 'GetInventory',
+                to: '/getInventories',
+            }"
+        />
+        <VerticalNavSectionTitle :item="{ heading: 'Customercenter' }" />
+        <VerticalNavLink
+            :item="{
+                title: 'MyPage',
+                to: '/myPages',
             }"
         />
     </ul>

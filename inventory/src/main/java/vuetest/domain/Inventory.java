@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.persistence.*;
 import lombok.Data;
 import vuetest.InventoryApplication;
+import vuetest.domain.StockDecreased;
 
 @Entity
 @Table(name = "Inventory_table")

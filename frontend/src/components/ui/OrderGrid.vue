@@ -162,7 +162,8 @@ export default {
     methods:{
         modifyOrderinfo(params){
             try{
-                this.repository.invoke(this.getSelectedRow, "modifyOrderinfo", params)
+                var path = "modifyOrderinfo".toLowerCase();
+                var temp = this.repository.invoke(this.selectedRow, path, params)
                 // 스넥바 관련 수정 필요
                 // this.$EventBus.$emit('show-success','modify orderinfo 성공적으로 처리되었습니다.')
                 for(var i = 0; i< this.value.length; i++){
@@ -174,7 +175,6 @@ export default {
             }catch(e){
                 console.log(e)
             }
-            
         },
     }
 }

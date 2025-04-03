@@ -34,19 +34,19 @@ export default {
     cards: [
       {
           text: "Order",
-          link: "/orders/orders",
-      },
-      {
-          text: "",
-          link: "//",
+          link: "/orders",
       },
       {
           text: "Inventory",
-          link: "/inventories/inventories",
+          link: "/inventories",
       },
       {
-          text: "",
-          link: "//",
+          text: "GetInventory",
+          link: "/getInventories",
+      },
+      {
+          text: "MyPage",
+          link: "/myPages",
       },
     ],
   }),

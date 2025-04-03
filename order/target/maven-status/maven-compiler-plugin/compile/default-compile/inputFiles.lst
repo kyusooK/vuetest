@@ -1,0 +1,13 @@
+/workspace/vuetest/order/src/main/java/vuetest/domain/Order.java
+/workspace/vuetest/order/src/main/java/vuetest/domain/OrderInfoModified.java
+/workspace/vuetest/order/src/main/java/vuetest/infra/PolicyHandler.java
+/workspace/vuetest/order/src/main/java/vuetest/domain/Address.java
+/workspace/vuetest/order/src/main/java/vuetest/infra/OrderHateoasProcessor.java
+/workspace/vuetest/order/src/main/java/vuetest/domain/InventoryId.java
+/workspace/vuetest/order/src/main/java/vuetest/infra/OrderController.java
+/workspace/vuetest/order/src/main/java/vuetest/domain/OrderRepository.java
+/workspace/vuetest/order/src/main/java/vuetest/OrderApplication.java
+/workspace/vuetest/order/src/main/java/vuetest/config/kafka/KafkaProcessor.java
+/workspace/vuetest/order/src/main/java/vuetest/domain/OrderPlaced.java
+/workspace/vuetest/order/src/main/java/vuetest/infra/AbstractEvent.java
+/workspace/vuetest/order/src/main/java/vuetest/domain/ModifyOrderinfoCommand.java
